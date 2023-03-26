@@ -7,7 +7,7 @@ This is the official implementation of the Ref-NPR paper
 IEEE Conference on Computer Vision and Pattern Recognition (**CVPR**) 2023  
 [ [arXiv](https://arxiv.org/abs/2212.02766) ] [ [Project Page](https://ref-npr.github.io/) ] [ [BibTeX](./assets/bib.txt) ] [ [Video](https://youtu.be/jnsnrTwVSBw) ] [ [Data](https://drive.google.com/drive/folders/1b6L250lrBrSxfKYPmDBHuY_EP9n7WKnA?usp=share_link) ]
 
-Ref-NPR enables a single-image scene stylization given the stylized view. This stylized view can be obtained by hand drawing, 2D image stylization methods, or text-driven controllable generation (e.g., generated with ControlNet). It also works well on 3D objects represented in NeRF.
+Ref-NPR is a powerful tool for single-image scene stylization, allowing users to create stylized versions of scenes based on a given stylized view. The stylized view can be generated through various methods, including hand drawings, 2D image stylization techniques, or text-driven controllable generation (e.g., using ControlNet). Ref-NPR is also compatible with 3D objects represented in NeRF (Neural Radiance Fields) format.
 
 
 | Sourse Content                  | Hand Drawing<br> Style Image       | ControlNet<br> "Chinese Painting" | ControlNet<br>"Kyoto Animation"  |
@@ -27,8 +27,7 @@ bash ./download_data.sh
 ```
 
 ### 2. (Optional) Photo-Realistic training (rendering) on all scenes
-You can also use your pretrained Plenoxel models.
-If you do not want to run basic PR (PhotoRealistic) models to all scenes, you can just directly goto the step 3, which will automatically run the corresponding PR model.
+You can also utilize your pre-trained Plenoxel models with Ref-NPR. If you prefer not to apply basic PhotoRealistic (PR) models to all scenes, you can skip directly to step 3. This will automatically execute the appropriate PR model for the given scene.
 ```bash
 cd opt
 bash ../exps/base_pr/run_all_bases_syn.sh
@@ -40,21 +39,21 @@ bash ../exps/base_pr/run_all_bases_tnt.sh
 ```bash
 # Ref-NPR: 
 # run_single.sh [style folder] [epoch_multi=2] [out_dir=./exps/refnpr]
-bash ./exps/refnpr/run_single.sh ./data/ref_case/flower_control/ flower
+bash ./exps/refnpr/run_single.sh ./data/ref_case/flower_control/
 ```
 The optimized artistic radiance field is inside ```exps/refnpr/flower_control/exp_out```, while the photorealistic one is inside ```opt/base_pr/ckpt_svox2/[scene_name(flower)]```.
 
 <br/>
 
-**(Optional)** We also provide the implementation of ARF and SNeRF for comparison. Our SNeRF implementation is using Gatys' as the stylization module and is not official as it is not open-sourced.
+**(Optional)** In addition to Ref-NPR, we provide implementations of ARF and SNeRF for comparison purposes. Please note that our SNeRF implementation is not the official version, as it is not open-sourced. We use Gatys' stylization module as a substitute in our SNeRF implementation.
 ```bash
 # ARF: 
 # run_single.sh [style folder] [epoch_multi=2] [out_dir=./exps/arf]
-bash ./exps/arf/run_single.sh ./data/ref_case/flower_control/ flower
+bash ./exps/arf/run_single.sh ./data/ref_case/flower_control/
 
 # SNeRF: 
 # run_single.sh [style folder] [epoch_multi=1] [out_dir=./exps/snerf]
-bash ./exps/snerf/run_single.sh ./data/ref_case/flower_control/ flower
+bash ./exps/snerf/run_single.sh ./data/ref_case/flower_control/
 ```
 
 ### 4. Customization on own data
