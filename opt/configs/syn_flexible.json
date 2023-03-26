@@ -1,0 +1,9 @@
+{
+    "reso": "[[256, 256, 256], [512, 512, 512]]",
+    "upsamp_every": 38400,
+    "lambda_tv": 0,
+    "lambda_tv_sh": 1e-3,
+    "lr_sigma": 2e1,
+    "lr_sh": 1e-1,
+    "lr_sh_final": 1e-2
+}

@@ -1,0 +1,5 @@
+*.pyc
+*exp_out
+*ckpt*
+*.pt
+data/
