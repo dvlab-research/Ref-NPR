@@ -23,6 +23,7 @@ dependencies:
       - moviepy
       - matplotlib
       - scipy>=1.6.0
+      - icecream
   - pytorch
   - torchvision
   - cudatoolkit
