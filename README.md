@@ -39,7 +39,7 @@ bash ../exps/base_pr/run_all_bases_tnt.sh
 ```bash
 # Ref-NPR: 
 # run_single.sh [style folder] [epoch_multi=2] [out_dir=./exps/refnpr]
-bash ./exps/refnpr/run_single.sh ./data/ref_case/flower_control/
+bash ./exps/refnpr/run_single.sh ./data/ref_case/flower_colorful/
 ```
 The optimized artistic radiance field is inside ```exps/refnpr/flower_control/exp_out```, while the photorealistic one is inside ```opt/base_pr/ckpt_svox2/[scene_name(flower)]```.
 
@@ -49,11 +49,11 @@ The optimized artistic radiance field is inside ```exps/refnpr/flower_control/ex
 ```bash
 # ARF: 
 # run_single.sh [style folder] [epoch_multi=2] [out_dir=./exps/arf]
-bash ./exps/arf/run_single.sh ./data/ref_case/flower_control/
+bash ./exps/arf/run_single.sh ./data/ref_case/flower_colorful/
 
 # SNeRF: 
 # run_single.sh [style folder] [epoch_multi=1] [out_dir=./exps/snerf]
-bash ./exps/snerf/run_single.sh ./data/ref_case/flower_control/
+bash ./exps/snerf/run_single.sh ./data/ref_case/flower_colorful/
 ```
 
 ### 4. Customization on own data
@@ -78,7 +78,7 @@ Here is an example of ```data_config.json```. Please be noted that one of ```["t
 
 <br/>
 
-To get content from training set, you can choose the image from training dataset. We provide a simple script to build choose the image and build a config:
+To get content from training set, you can choose the image from training dataset. We provide a simple script to choose the content image and build a config. Inside this script, a dictionary is used to select scene and image.
 ```bash
 python ./exps/ref_get_example.py
 ```
