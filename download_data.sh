@@ -1,3 +1,6 @@
+# install google drive downloading tool
+python -m pip install gdown
+
 mkdir -p data
 cd data
 
