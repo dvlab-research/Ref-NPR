@@ -1,13 +1,14 @@
 # Ref-NPR: Reference-Based Non-Photorealistic Radiance Fields for Controllable Scene Stylization (CVPR2023)
 
-<image width="100%" src="assets/light.png">
-
 This is the official implementation of the Ref-NPR paper
+
 
 - **Ref-NPR: Reference-Based Non-Photorealistic Radiance Fields for Controllable Scene Stylization**   
 *Yuechen Zhang, Zexin He, Jinbo Xing, Xufeng Yao, Jiaya Jia*  
 IEEE Conference on Computer Vision and Pattern Recognition (**CVPR**) 2023  
 [ [arXiv](https://arxiv.org/abs/2212.02766) ] [ [Project Page](https://ref-npr.github.io/) ] [ [BibTeX](./assets/bib.txt) ] [ [Video](https://youtu.be/jnsnrTwVSBw) ] [ [Data](https://drive.google.com/drive/folders/1b6L250lrBrSxfKYPmDBHuY_EP9n7WKnA?usp=share_link) ]
+
+<image width="100%" src="assets/light.png">
 
 Ref-NPR is a powerful tool for single-image scene stylization, allowing users to create stylized versions of scenes based on a given stylized view. The stylized view can be generated through various methods, including hand drawings, 2D image stylization techniques, or text-driven controllable generation (e.g., using ControlNet). Ref-NPR is also compatible with 3D objects represented in NeRF (Neural Radiance Fields) format.
 
@@ -114,10 +115,9 @@ For multi-reference case, just use a list to store the style image and indexes:
 }
 ```
 
-<br/>
 
 ## Citation
-```
+```bibtex
 @inproceedings{
       zhang2023refnpr,
       title={Ref-{NPR}: Reference-Based Non-Photorealistic Radiance Fields for Controllable Scene Stylization},
