@@ -1,5 +1,7 @@
 # Ref-NPR: Reference-Based Non-Photorealistic Radiance Fields for Controllable Scene Stylization (CVPR2023)
 
+<image width="100%" src="assets/light.png">
+
 This is the official implementation of the Ref-NPR paper
 
 - **Ref-NPR: Reference-Based Non-Photorealistic Radiance Fields for Controllable Scene Stylization**   
