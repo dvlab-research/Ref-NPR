@@ -2,4 +2,4 @@
 *exp_out
 *ckpt*
 *.pt
-data/
+data
