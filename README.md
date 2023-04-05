@@ -122,7 +122,7 @@ For multi-reference case, just use a list to store the style image and indexes:
       zhang2023refnpr,
       title={Ref-{NPR}: Reference-Based Non-Photorealistic Radiance Fields for Controllable Scene Stylization},
       author={Zhang, Yuechen and He, Zexin and Xing, Jinbo and Yao, Xufeng and Jia, Jiaya},
-      booktitle={CVPR},
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
       year={2023}
 }
 ```
